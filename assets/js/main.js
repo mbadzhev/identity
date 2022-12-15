@@ -8,6 +8,8 @@ const button = document.getElementById('identityButton');
 const urlIdentity = 'https://randomuser.me/api/';
 const urlQuote = 'https://api.adviceslip.com/advice/';
 
+button.addEventListener("click", function () { generateIdentity() });
+
 function createNode(element) {
   return document.createElement(element);
 }
