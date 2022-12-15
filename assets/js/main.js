@@ -9,3 +9,7 @@ const button = document.getElementById('identityButton');
 function createNode(element) {
   return document.createElement(element);
 }
+
+function appendNode(parent, element) {
+  return parent.appendChild(element);
+}
