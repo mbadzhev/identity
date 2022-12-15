@@ -5,3 +5,7 @@ window.addEventListener('load', (event) => {
 
 const container = document.getElementById('identityContainer');
 const button = document.getElementById('identityButton');
+
+function createNode(element) {
+  return document.createElement(element);
+}
