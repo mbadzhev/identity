@@ -19,3 +19,10 @@ function appendNode(parent, element) {
 function removeNode(parent, element) {
   return parent.removeChild(element);
 }
+
+/* Function taken from https://stackoverflow.com/questions/1527803/generating-random-whole-numbers-in-javascript-in-a-specific-range */
+function getRandomInt() {
+  min = Math.ceil(1);
+  max = Math.floor(200);
+  return Math.floor(Math.random() * (200 - 1 + 1)) + 1;
+}
