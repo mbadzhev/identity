@@ -104,3 +104,8 @@ function fetchIdentity() {
         });
     });
 }
+
+function generateIdentity() {
+  container.innerHTML = '';
+  fetchIdentity();
+}
