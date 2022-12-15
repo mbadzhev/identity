@@ -5,6 +5,8 @@ window.addEventListener('load', (event) => {
 
 const container = document.getElementById('identityContainer');
 const button = document.getElementById('identityButton');
+const urlIdentity = 'https://randomuser.me/api/';
+const urlQuote = 'https://api.adviceslip.com/advice/';
 
 function createNode(element) {
   return document.createElement(element);
