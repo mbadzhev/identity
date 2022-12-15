@@ -89,5 +89,18 @@ function fetchIdentity() {
     })
     .catch(function (error) {
       console.log(error);
+    })
+    .finally(function () {
+      fetch(urlQuote + getRandomInt())
+        .then((response) => response.json())
+        .then(function (data) {
+          let object = data;
+          let quote = createNode('p');
+          quote.innerHTML = `${object.slip.advice}`;
+          appendNode(container, quote);
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
     });
 }
