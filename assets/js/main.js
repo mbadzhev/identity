@@ -13,3 +13,7 @@ function createNode(element) {
 function appendNode(parent, element) {
   return parent.appendChild(element);
 }
+
+function removeNode(parent, element) {
+  return parent.removeChild(element);
+}
