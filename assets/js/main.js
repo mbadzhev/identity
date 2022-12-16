@@ -80,13 +80,27 @@ function fetchIdentity() {
         appendNode(divRowIntro, divColIntro);
         appendNode(container, divRowIntro);
 
-        appendNode(container, gender);
-        appendNode(container, address1);
-        appendNode(container, address2);
-        appendNode(container, email);
-        appendNode(container, login);
-        appendNode(container, age);
-        appendNode(container, phone);
+        let divRowData = createNode('div');
+        divRowData.classList.add('row', 'row-cols-1', 'row-cols-sm-2');
+        let divColDataLeft = createNode('div');
+        divColDataLeft.classList.add('col');
+        let divColDataRight = createNode('div');
+        divColDataRight.classList.add('col');
+        divColDataRight.setAttribute("id","divColDataRight");
+
+        // Add profile data
+        appendNode(divColDataLeft, age);
+        appendNode(divColDataLeft, gender);
+        appendNode(divColDataLeft, address1);
+        appendNode(divColDataLeft, address2);
+
+        appendNode(divColDataRight, email);
+        appendNode(divColDataRight, phone);
+        appendNode(divColDataRight, login);
+
+        appendNode(divRowData, divColDataLeft);
+        appendNode(divRowData, divColDataRight);
+        appendNode(container, divRowData);
       })
     })
     .catch(function (error) {
@@ -99,7 +113,7 @@ function fetchIdentity() {
           let object = data;
           let quote = createNode('p');
           quote.innerHTML = `${object.slip.advice}`;
-          appendNode(container, quote);
+          appendNode(document.getElementById('divColDataRight'), quote);
         })
         .catch(function (error) {
           console.log(error);
