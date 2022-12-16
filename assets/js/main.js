@@ -43,6 +43,12 @@ function fetchIdentity() {
         img.classList.add('rounded-circle', 'img-thumbnail', 'mx-auto', 'd-block');
         img.src = identity.picture.large;
 
+        let age = createNode('p');
+        age.innerHTML = `${identity.dob.age}`;
+
+        let birthday = createNode('p');
+        birthday.innerHTML = identity.dob.date.split("T")[0];
+
         let gender = createNode('p');
         gender.innerHTML = `${identity.gender}`;
 
@@ -57,9 +63,6 @@ function fetchIdentity() {
 
         let login = createNode('p');
         login.innerHTML = `${identity.login.username} ${identity.login.password}`;
-
-        let age = createNode('p');
-        age.innerHTML = `${identity.dob.age} (${identity.dob.date})`;
 
         let phone = createNode('p');
         phone.innerHTML = `${identity.phone}`;
