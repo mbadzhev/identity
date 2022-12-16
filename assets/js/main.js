@@ -61,8 +61,11 @@ function fetchIdentity() {
         let email = createNode('p');
         email.innerHTML = `${identity.email}`;
 
-        let login = createNode('p');
-        login.innerHTML = `${identity.login.username} ${identity.login.password}`;
+        let username = createNode('p');
+        username.innerHTML = `${identity.login.username}`;
+
+        let password = createNode('p');
+        password.innerHTML = `${identity.login.password}`;
 
         let phone = createNode('p');
         phone.innerHTML = `${identity.phone}`;
@@ -89,7 +92,7 @@ function fetchIdentity() {
         divColDataLeft.classList.add('col');
         let divColDataRight = createNode('div');
         divColDataRight.classList.add('col');
-        divColDataRight.setAttribute("id","divColDataRight");
+        divColDataRight.setAttribute("id", "divColDataRight");
 
         // Add profile data
         appendNode(divColDataLeft, age);
@@ -99,7 +102,8 @@ function fetchIdentity() {
 
         appendNode(divColDataRight, email);
         appendNode(divColDataRight, phone);
-        appendNode(divColDataRight, login);
+        appendNode(divColDataRight, username);
+        appendNode(divColDataRight, password);
 
         appendNode(divRowData, divColDataLeft);
         appendNode(divRowData, divColDataRight);
